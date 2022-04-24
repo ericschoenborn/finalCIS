@@ -2,7 +2,7 @@
    include("../config.php");
    session_start();
 	$type="login";
-	if(!isset($_SESSION['username'])){
+	if(!isset($_SESSION['admin'])){
 		header("Location: admin.php");
 	}
    if($_SERVER["REQUEST_METHOD"] == "POST"){

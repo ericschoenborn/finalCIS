@@ -26,7 +26,7 @@
       $count = mysqli_num_rows($result);
 
       if($count > 0) {
- 			$_SESSION['username'] = $username; 
+ 			$_SESSION['admin'] = $username; 
       }else {
         	return "Your Login Name or Password is invalid";
       }
@@ -41,8 +41,8 @@
    <body>
 		<?php include "nav.php" ?>	
       <div class="content">
-      	<?php if(isset($_SESSION['username'])){ ?>
-            <div>you are logged in as <?= $_SESSION['username'] ?></div>
+      	<?php if(isset($_SESSION['admin'])){ ?>
+            <div>you are logged in as <?= $_SESSION['admin'] ?></div>
 				<form method="post" action="admin.php">
                <input type="hidden" name="logout" value=true />
                <input type="submit" value="Log Out">

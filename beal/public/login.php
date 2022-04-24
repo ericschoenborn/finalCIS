@@ -7,6 +7,7 @@
          $type = $_POST['action'];
 			if($type == "create"){
             $newError = NewUser();
+				header("location: login.php");
          }
       }else{
 			$error = LogInUser();
